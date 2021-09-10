@@ -1,0 +1,15 @@
+import { Factory, Seeder } from 'typeorm-seeding';
+import { Connection } from 'typeorm';
+
+export default class {{nameCLasseSeed}} implements Seeder {
+  public async run(factory: Factory, connection: Connection): Promise<any> {
+    return await connection
+      .createQueryBuilder()
+      .insert()
+      .into()
+      .values()
+      .execute()
+      .then(() => Promise.resolve(true))
+      .catch(() => Promise.resolve(false));
+  }
+}
