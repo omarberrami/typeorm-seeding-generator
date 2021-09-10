@@ -1,6 +1,6 @@
 {
   "name": "typeorm-seeding-generator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "lib/cli.js",
   "repository": "https://github.com/omarberrami/typeorm-seeding-generator.git",
   "author": "Omar Berrami",

@@ -1,8 +1,8 @@
 import * as chalk from 'chalk';
 import { OptionValues } from 'commander';
 import { readFileSync, writeFileSync } from 'fs';
-import { getConnectionOptions } from '../connection';
-import { toCamelCase, camelToDashedCase } from '../utils/string-utils';
+import { getConnectionOptions } from 'typeorm';
+import { toCamelCase, camelToDashedCase, capitalize } from '../utils/string-utils';
 
 export const seedGenerator = async (options: OptionValues) => {
   const connection = await getConnectionOptions();
@@ -18,7 +18,7 @@ export const seedGenerator = async (options: OptionValues) => {
   if (connection && connection.cli && connection.cli.seedsDir) {
     let data = readFileSync(__dirname + '/../template/template-seed.template', { encoding: 'utf8', flag: 'r' });
 
-    data = data.replace('{{nameCLasseSeed}}', toCamelCase(options.name + '-' + date.getTime()));
+    data = data.replace('{{nameCLasseSeed}}', capitalize(toCamelCase(options.name + '-' + date.getTime())));
 
     try {
       writeFileSync(
