@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import * as chalk from 'chalk'; 
+import * as chalk from 'chalk';
 import clear = require('clear');
-import * as  figlet from 'figlet';
+import * as figlet from 'figlet';
 import { Command } from 'commander';
 import { seedGenerator } from './builder/seed-generator';
 
