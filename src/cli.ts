@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-import * as chalk from 'chalk';
-const clear = require('clear');
+import * as chalk from 'chalk'; 
+import clear = require('clear');
 import * as  figlet from 'figlet';
 import { Command } from 'commander';
 import { seedGenerator } from './builder/seed-generator';
 
 clear();
-console.log(chalk.red(figlet.textSync('typeorm-seeding-generator', { horizontalLayout: 'default' })));
+console.info(chalk.red(figlet.textSync('typeorm-seeding-generator', { horizontalLayout: 'default' })));
 
 const program = new Command();
 program
