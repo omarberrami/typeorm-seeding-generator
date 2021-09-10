@@ -1,7 +1,7 @@
 import * as chalk from 'chalk';
 import { OptionValues } from 'commander';
 import { readFileSync, writeFileSync } from 'fs';
-import { getConnectionOptions } from 'typeorm';
+import { getConnectionOptions } from '../connection';
 import { toCamelCase, camelToDashedCase } from '../utils/string-utils';
 
 export const seedGenerator = async (options: OptionValues) => {
