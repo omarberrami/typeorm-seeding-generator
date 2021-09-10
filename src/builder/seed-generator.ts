@@ -10,7 +10,7 @@ export const seedGenerator = async (options: OptionValues) => {
   const date = new Date();
 
   if (options.name.match(/^\d/)) {
-    console.log(chalk.red('Error name file start with number'));
+    console.error(chalk.red('Error name file start with number'));
     return;
   }
 
@@ -27,10 +27,9 @@ export const seedGenerator = async (options: OptionValues) => {
         data,
       );
     } catch (e) {
-      console.log(e);
-      console.log(chalk.red('Error writing file'));
+      console.error(chalk.red('Error writing file'));
     }
   } else {
-    console.log(chalk.red('Error loading seeds Dir'));
+    console.error(chalk.red('Error loading seeds Dir'));
   }
 };

@@ -11,7 +11,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
   },
   "include": ["src/*"],
   "exclude": ["node_modules", "**/__tests__/*", "src/template/*"]

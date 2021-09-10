@@ -1,7 +1,7 @@
 {
   "name": "typeorm-seeding-generator",
   "version": "1.0.0",
-  "main": "./lib/cli.js",
+  "main": "lib/cli.js",
   "repository": "https://github.com/omarberrami/typeorm-seeding-generator.git",
   "author": "Omar Berrami",
   "license": "MIT",
@@ -11,12 +11,11 @@
   "scripts": {
     "clean": "rimraf lib/",
     "copy-files": "copyfiles -u 1 src/template/* lib/",
-    "test": "jest --config jestconfig.json",
     "build": "yarn clean && tsc -p . && yarn copy-files ",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "yarn run build",
-    "prepublishOnly": "yarn test && yarn run lint",
+    "prepublishOnly": "yarn run lint",
     "preversion": "yarn run lint",
     "version": "yarn run format && git add -A src",
     "postversion": "git push && git push --tags",
